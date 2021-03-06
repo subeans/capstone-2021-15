@@ -5,7 +5,7 @@ import { withRouter, Link } from 'react-router-dom';
 function Welcome(props) {
 
     const onClickHandler = (e) => {
-        axios.get('/user/signout')
+        axios.get('/user/logout')
             .then(response => {
                 if(response.data.success ) {
                     props.history.push('/login')
@@ -25,7 +25,7 @@ function Welcome(props) {
                 <button> 회원가입 </button>
             </Link>
             <button onClick={onClickHandler}>
-                Sign Out
+                Log Out
             </button>
         </div>
     )
