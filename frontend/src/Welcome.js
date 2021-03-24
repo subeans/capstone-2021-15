@@ -5,7 +5,7 @@ import { withRouter, Link } from 'react-router-dom';
 function Welcome(props) {
 
     const onClickHandler = (e) => {
-        axios.get('/user/logout')
+        axios.get('/api/user/logout')
             .then(response => {
                 if(response.data.success ) {
                     props.history.push('/login')

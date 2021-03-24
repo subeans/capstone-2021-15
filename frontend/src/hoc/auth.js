@@ -10,7 +10,7 @@ export default function (SpecificComponent, option, adminRoute = null) {
     // adminRoute: 관리자만 출입 가능 페이지. 기본적으로 다 null
     function AuthenticationCheck(props) {
         useEffect(() => {
-            axios.get('/user/auth').then(response => {
+            axios.get('/api/user/auth').then(response => {
                 if( !response.data.isAuth) {
                     if( option) {
                         props.history.push('/login');

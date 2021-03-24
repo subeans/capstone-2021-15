@@ -42,7 +42,7 @@ function Signup(props) {
             age: age,
             personalColor: personalColor
         }
-        axios.post('/user/signup', body)
+        axios.post('/api/user/signup', body)
             .then(response => {
                 if(response.data.registerSuccess ) {
                     props.history.push('/login');

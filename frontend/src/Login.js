@@ -22,7 +22,7 @@ function Login(props) {
             nickName: nickName,
             password: password
         }
-        axios.post('/user/login', body)
+        axios.post('/api/user/login', body)
             .then(response => {
                 if(response.data.loginSuccess ) {
                         props.history.push('/main'); 
